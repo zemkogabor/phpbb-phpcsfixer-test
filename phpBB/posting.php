@@ -704,7 +704,7 @@ $post_data['enable_urls'] = $post_data['enable_magic_url'];
 
 if ($mode != 'edit')
 {
-	$post_data['enable_sig']		= ($config['allow_sig'] && $user->optionget('attachsig')) ? true: false;
+	$post_data['enable_sig']		= ($config['allow_sig'] && $user->optionget('attachsig')) ? true : false;
 	$post_data['enable_smilies']	= ($config['allow_smilies'] && $user->optionget('smilies')) ? true : false;
 	$post_data['enable_bbcode']		= ($config['allow_bbcode'] && $user->optionget('bbcode')) ? true : false;
 	$post_data['enable_urls']		= true;

@@ -29,7 +29,7 @@ class merge_duplicate_bbcodes extends \phpbb\db\migration\container_aware_migrat
 		$bbcodes = [];
 		while ($row = $this->db->sql_fetchrow($result))
 		{
-			$variant = (substr($row['bbcode_tag'], -1) === '=') ? 'with': 'without';
+			$variant = (substr($row['bbcode_tag'], -1) === '=') ? 'with' : 'without';
 			$bbcode_name = strtolower(rtrim($row['bbcode_tag'], '='));
 			$bbcodes[$bbcode_name][$variant] = $row;
 		}

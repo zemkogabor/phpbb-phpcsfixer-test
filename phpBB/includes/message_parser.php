@@ -1169,12 +1169,12 @@ class parse_message extends bbcode_firstpass
 		$parser = $phpbb_container->get('text_formatter.parser');
 
 		// Set the parser's options
-		($allow_bbcode)       ? $parser->enable_bbcodes()       : $parser->disable_bbcodes();
-		($allow_magic_url)    ? $parser->enable_magic_url()     : $parser->disable_magic_url();
-		($allow_smilies)      ? $parser->enable_smilies()       : $parser->disable_smilies();
-		($allow_img_bbcode)   ? $parser->enable_bbcode('img')   : $parser->disable_bbcode('img');
+		($allow_bbcode) ? $parser->enable_bbcodes() : $parser->disable_bbcodes();
+		($allow_magic_url) ? $parser->enable_magic_url() : $parser->disable_magic_url();
+		($allow_smilies) ? $parser->enable_smilies() : $parser->disable_smilies();
+		($allow_img_bbcode) ? $parser->enable_bbcode('img') : $parser->disable_bbcode('img');
 		($allow_quote_bbcode) ? $parser->enable_bbcode('quote') : $parser->disable_bbcode('quote');
-		($allow_url_bbcode)   ? $parser->enable_bbcode('url')   : $parser->disable_bbcode('url');
+		($allow_url_bbcode) ? $parser->enable_bbcode('url') : $parser->disable_bbcode('url');
 
 		// Set some config values
 		$parser->set_vars(array(

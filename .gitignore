@@ -52,6 +52,8 @@
 node_modules
 /build/package_signature
 
+.php-cs-fixer.cache
+
 # Excludes IDE / editors files
 *~
 .idea

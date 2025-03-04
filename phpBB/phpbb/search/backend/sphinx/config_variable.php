@@ -52,6 +52,6 @@ class config_variable extends config_item
 	*/
 	public function to_string(): string
 	{
-		return "\t" . $this->name . ' = ' . str_replace("\n", " \\\n", $this->value) . ($this->comment ? ' ' . $this->comment  : '') . "\n";
+		return "\t" . $this->name . ' = ' . str_replace("\n", " \\\n", $this->value) . ($this->comment ? ' ' . $this->comment : '') . "\n";
 	}
 }

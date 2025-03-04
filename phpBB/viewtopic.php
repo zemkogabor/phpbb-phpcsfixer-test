@@ -1217,10 +1217,10 @@ $i = $i_total = 0;
 
 // Go ahead and pull all data for this topic
 $sql = 'SELECT p.post_id
-	FROM ' . POSTS_TABLE . ' p' . (($join_user_sql[$sort_key]) ? ', ' . USERS_TABLE . ' u': '') . "
+	FROM ' . POSTS_TABLE . ' p' . (($join_user_sql[$sort_key]) ? ', ' . USERS_TABLE . ' u' : '') . "
 	WHERE p.topic_id = $topic_id
 		AND " . $phpbb_content_visibility->get_visibility_sql('post', $forum_id, 'p.') . "
-		" . (($join_user_sql[$sort_key]) ? 'AND u.user_id = p.poster_id': '') . "
+		" . (($join_user_sql[$sort_key]) ? 'AND u.user_id = p.poster_id' : '') . "
 		$limit_posts_time
 	ORDER BY $sql_sort_order";
 
@@ -2357,11 +2357,11 @@ if ($s_can_vote || $s_quick_reply)
 		);
 
 		// Originally we use checkboxes and check with isset(), so we only provide them if they would be checked
-		(!$s_bbcode)					? $qr_hidden_fields['disable_bbcode'] = 1		: true;
-		(!$s_smilies)					? $qr_hidden_fields['disable_smilies'] = 1		: true;
-		(!$config['allow_post_links'])	? $qr_hidden_fields['disable_magic_url'] = 1	: true;
-		($s_attach_sig)					? $qr_hidden_fields['attach_sig'] = 1			: true;
-		($s_notify)						? $qr_hidden_fields['notify'] = 1				: true;
+		(!$s_bbcode) ? $qr_hidden_fields['disable_bbcode'] = 1 : true;
+		(!$s_smilies) ? $qr_hidden_fields['disable_smilies'] = 1 : true;
+		(!$config['allow_post_links']) ? $qr_hidden_fields['disable_magic_url'] = 1 : true;
+		($s_attach_sig) ? $qr_hidden_fields['attach_sig'] = 1 : true;
+		($s_notify) ? $qr_hidden_fields['notify'] = 1 : true;
 		($topic_data['topic_status'] == ITEM_LOCKED) ? $qr_hidden_fields['lock_topic'] = 1 : true;
 
 		$tpl_ary = [
